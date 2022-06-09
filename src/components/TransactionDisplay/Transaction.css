@@ -1,0 +1,45 @@
+.transaction-list-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+
+.income-list-container,.expense-list-container{
+    width: 25%; 
+    text-align: center;
+}
+
+
+.income-list p:nth-child(odd),
+.expense-list div:nth-child(odd)
+
+{
+    background-color: rgb(251, 247, 247);
+}
+
+
+.income-list p:nth-child(even),
+.expense-list div:nth-child(even)
+{
+    background-color: rgb(197, 238, 179);
+}
+
+
+.income-list p,.expense-list div{
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    justify-content: space-around;
+    padding: 16px 12px;
+    flex-wrap: wrap;
+}
+
+.expense-list-block{
+    align-self: stretch;
+}
+
+p span{
+display: inline-block;
+margin:0 10px;
+}

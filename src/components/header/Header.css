@@ -1,0 +1,66 @@
+.headerDate{
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 10px;
+}
+
+.currentBudget{
+    font-size: 3rem;
+    margin: 10px;
+}
+.transaction-state-container,
+.header-container{
+    display: flex;
+    flex:1;
+    flex-direction: column;
+}
+
+.header-container{
+    align-items: center;
+    background-image: url("https://mcdn.wallpapersafari.com/medium/72/73/bSsf9m.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: aliceblue;
+  text-align: center;
+  padding: 20px;
+}
+
+.transaction-state-container{
+    color: aliceblue;
+    font-weight: 700;
+    gap: 10px;
+    width: 40%;
+}
+.income-state, .expense-state{
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+.income-state p, .expense-state p{
+    padding-left: 10px;
+    text-align: left;
+    width: 40%;
+    margin: 10px;   
+}
+
+.income-state{
+    background-color: rgb(34, 95, 193);
+    
+}
+.expense-state{
+    background-color: rgb(192, 136, 116)
+}
+
+
+.procent-final{
+    border: 1px solid rgb(233, 164, 139) ;
+    border-radius: 8px;
+    box-shadow: 3px 6px gray;
+    margin-left: 10px;
+}
+
