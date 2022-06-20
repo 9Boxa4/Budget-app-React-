@@ -1,10 +1,14 @@
 import React,{useState} from 'react'
 import './Form.css'
+import {v4 as uuidv4} from 'uuid'
 
-const Form = (props) => {
+// console.log(uuidv4());
+
+export const Form = (props) => {
   const [choice,setChoice] = useState('-');
   const [description,setDescription] = useState('')
   const [valueInput,setValueInput] = useState('');
+  const [id,setId] = useState(uuidv4())
 
   //function for checking if there is only spaces
   const isEmpty = (spaces) => {
@@ -30,10 +34,12 @@ const Form = (props) => {
     }
       else
     {
-      // const allInputs= [choice,description,valueInput]
-      props.getInputsToDisplay([choice,description,valueInput]);
+      setId(uuidv4())
+  props.getInputsToDisplay(choice,description,valueInput,id)
+ 
     }
   }
+  
 
  //clearing input fields
  const clearInputFields = () =>
@@ -49,6 +55,7 @@ const Form = (props) => {
 
 
   return (
+ 
     <form id='formId' onSubmit={handleSubmit} className='input-form'>
       <select 
       value={choice}
@@ -62,8 +69,9 @@ const Form = (props) => {
 
       <input id="inputValueId" onChange={(e=> setValueInput(e.target.value))} type="number" placeholder="Value" />
 
-     <input type="submit" onClick={clearInputFields} value={choice === '+'? '✅' : '🟥'}  />
+     <input  type="submit" onClick={clearInputFields} value={choice === '+'? '✅' : '⛔'}  />
   </form>
+  
   )
 }
 
